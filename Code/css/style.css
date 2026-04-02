@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #ffffff;
+}
+
+header {
+  background: rgba(24, 35, 45, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.45);
+}
+
+.card-title, .card-text {
+  color: #f0f9ff;
+}
+
+.btn-primary {
+  background: #4e8cff;
+  border-color: #4e8cff;
+}
+
+.btn-primary:hover {
+  background: #3184ff;
+  border-color: #2b6ef4;
+}
+
+#searchInput {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#searchInput::placeholder {
+  color: #dce9ff;
+}
