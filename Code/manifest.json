@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest",
+  "name": "VR Travel Experience",
+  "short_name": "VR Travel",
+  "description": "Immersive virtual reality travel tours to Paris, Maldives, Tokyo and more",
+  "scope": "/wt-assignment 1/Code/",
+  "start_url": "/wt-assignment 1/Code/index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["travel", "entertainment", "photo"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "icons/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1549039725-9c8d1c8d0c82?w=1280&q=80",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}
+
