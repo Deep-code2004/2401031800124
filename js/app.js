@@ -201,7 +201,7 @@
         
         destArray.forEach(dest => {
             const col = document.createElement('div');
-            col.className = 'col-md-6 col-lg-4';
+            col.className = 'col-md-6 col-lg-3';
             
             const card = document.createElement('article');
             card.className = 'card h-100';

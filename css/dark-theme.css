@@ -1,0 +1,331 @@
+/* VR Travel Experience - Premium Dark/Neon Glassmorphism Theme */
+
+:root {
+    --primary: #8b5cf6; /* Neon Purple */
+    --primary-dark: #7c3aed;
+    --primary-light: #a78bfa;
+    --accent: #00f6ff; /* Neon Cyan */
+    --dark: #030014; /* Deep space dark */
+    --dark-secondary: #0f0728;
+    --white: #ffffff;
+    --gray-50: #1a103c;
+    --gray-100: #2a1b54;
+    --gray-200: #3b2875;
+    --gray-300: #4c3699;
+    --gray-400: #8c78c1;
+    --gray-500: #a99ed1;
+    --gray-600: #c9c1df;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+body {
+    background: var(--dark);
+    color: var(--gray-500);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+}
+
+/* Loading Screen adjustments */
+.loader-wrapper {
+    background: var(--dark) !important;
+}
+
+.loader-content p {
+    color: var(--white) !important;
+}
+
+/* Glassmorphism Navbar */
+.navbar.scrolled {
+    background: rgba(3, 0, 20, 0.7) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-brand {
+    color: var(--white) !important;
+}
+
+.brand-text {
+    background: linear-gradient(135deg, var(--accent), var(--primary-light)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 0 20px rgba(0, 246, 255, 0.4) !important;
+}
+
+.nav-link {
+    color: var(--gray-400) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: var(--accent) !important;
+    background: rgba(0, 246, 255, 0.1) !important;
+    box-shadow: inset 0 0 10px rgba(0, 246, 255, 0.1);
+}
+
+/* Navbar toggler for mobile */
+.navbar-toggler {
+    filter: invert(1);
+    border-color: rgba(255,255,255,0.2) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #030014 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient {
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%) !important;
+    width: 800px;
+    height: 800px;
+    top: -200px;
+    right: -200px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 246, 255, 0.1);
+    filter: blur(100px);
+    border-radius: 50%;
+    bottom: 0;
+    left: 10%;
+    animation: drift 10s infinite alternate linear;
+}
+
+@keyframes drift {
+    from { transform: translateX(0) translateY(0); }
+    to { transform: translateX(50px) translateY(-50px); }
+}
+
+.hero-badge {
+    background: rgba(3, 0, 20, 0.5) !important;
+    border: 1px solid rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+    color: var(--primary-light) !important;
+    backdrop-filter: blur(8px);
+}
+
+.title-large {
+    color: var(--white) !important;
+}
+
+/* Search Box */
+.search-input-wrapper {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+}
+
+.search-input-wrapper:focus-within {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 15px rgba(0, 246, 255, 0.2) !important;
+}
+
+.search-input-wrapper input {
+    color: var(--white) !important;
+}
+
+/* Destintions base overriding */
+.destinations-section {
+    background: var(--dark) !important;
+}
+
+.destinations-grid .card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-wrapper {
+    height: 45% !important; /* Take less height so the card fits inside square */
+}
+
+.destinations-grid .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    padding: 12px 16px !important;
+}
+
+.card-actions {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 10px 16px !important;
+}
+
+.destinations-grid .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.destinations-grid .card:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.3) !important;
+    transform: translateY(-12px) scale(1.02) !important;
+}
+
+.destinations-grid .card-title {
+    color: var(--white) !important;
+}
+
+.card-actions {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.card-badge {
+    background: rgba(139, 92, 246, 0.8) !important;
+    border: 1px solid rgba(167, 139, 250, 0.5);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5) !important;
+}
+
+.start-tour {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.start-tour:hover {
+    background: linear-gradient(135deg, var(--accent), var(--primary)) !important;
+    box-shadow: 0 0 25px rgba(0, 246, 255, 0.6) !important;
+}
+
+/* Features */
+.features-section {
+    background: var(--dark-secondary) !important;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.2) !important;
+}
+
+.feature-card h3 {
+    color: var(--white);
+}
+
+.feature-check {
+    background: rgba(0, 246, 255, 0.1) !important;
+    color: var(--accent) !important;
+    box-shadow: 0 0 10px rgba(0, 246, 255, 0.2);
+}
+
+.features-list strong {
+    color: var(--white);
+}
+
+/* Select */
+.filter-select {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--white) !important;
+}
+.filter-select option {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+/* Newsletter */
+.newsletter-section {
+    background: var(--dark) !important;
+}
+
+.newsletter-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(0, 246, 255, 0.1)) !important;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+.newsletter-form .btn-primary {
+    background: var(--accent) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(0, 246, 255, 0.4);
+    border: none;
+}
+
+.newsletter-form .btn-primary:hover {
+    background: #fff !important;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Modal */
+.modal-content {
+    background: rgba(15, 7, 40, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.modal-title {
+    color: var(--accent) !important;
+    text-shadow: 0 0 10px rgba(0, 246, 255, 0.3);
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.features-list-modal li {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--white);
+}
+.features-list-modal li::before {
+    color: var(--accent) !important;
+}
+
+/* Footer overrides */
+.site-footer {
+    background: var(--dark-secondary) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Remove default Bootstrap focus outlines in search */
+input:focus, select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Toasts */
+.toast {
+    background: rgba(15, 7, 40, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    color: var(--white);
+}
